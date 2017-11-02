@@ -34,8 +34,11 @@ try:
     subprocess.call(["pdflatex", "-shell-escape", texfilename])
 except OSError, e:
 	print ("Error: %s - %s." % (e.filename,e.strerror))
-	    
-#subprocess.call(["lpr", pdffile])
+	
+#try:	    
+#    subprocess.call(["lpr", pdffile])
+#except OSError, e:
+#    print ("Error: %s - %s." % (e.filename,e.strerror))
 
 try:
     os.remove(texfilename)
