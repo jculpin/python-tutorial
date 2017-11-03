@@ -23,6 +23,10 @@ try:
 except OSError, e:
 	print ("Error: %s - %s." % (e.filename,e.strerror))  
 	
+if not os.path.isfile('template.tex'):
+    print("Error: template.tex file not found")
+    sys.exit(1)
+    	
 with open('template.tex') as infile:
     for line in infile:
         newline = line.replace("$1", filename)
