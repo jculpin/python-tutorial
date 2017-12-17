@@ -6,3 +6,7 @@ def fib2(n):  # return Fibonacci series up to n
         result.append(a)    # see below
         a, b = b, a+b
     return result
+
+if __name__ == "__main__":
+    import sys
+    print(fib2(int(sys.argv[1])))
